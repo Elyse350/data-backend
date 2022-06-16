@@ -1,7 +1,5 @@
 {
-  "engines": {
-    "node": "16.x"
-  },
+  
   "name": "data",
   "version": "1.0.0",
   "description": "",
@@ -11,8 +9,15 @@
     "dev": "nodemon --exec babel-node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "elyse",
   "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.5",
