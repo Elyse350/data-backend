@@ -16,7 +16,7 @@
   "author": "elyse",
   "license": "ISC",
   "engines": {
-    "node": "16.x"
+    "node": "16.13.0"
   },
   "dependencies": {
     "@babel/cli": "^7.17.10",
@@ -25,6 +25,7 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/polyfill": "^7.0.0",
     "@babel/register": "^7.12.10",
+    "@babel/preset-env": "^7.18.2",
     "@types/node": "^14.14.22",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
@@ -34,8 +35,5 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.8",
     "nodemon": "^2.0.16"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.18.2"
   }
 }
