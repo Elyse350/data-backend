@@ -1,5 +1,5 @@
 import express from "express";
-import dataController from "../controller/dataController";
+import dataController from "../Controller/dataController";
 import Validator from "../middleware/validator";
 
 const dataRouter = express.Router();
