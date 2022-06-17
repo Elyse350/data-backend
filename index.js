@@ -23,7 +23,8 @@ mongoose.connect(dburl, {
     useCreateIndex:true,
     userUnifiedTopology:true,
     userFinfAndModify:false,
-}).then(() => console.log("database connected successfully"));
+
+  }).then(() => console.log("database connected successfully"));
 const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
