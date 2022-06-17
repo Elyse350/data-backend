@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import dataRouter from "./src/routes/dataroutes"
 import cors from "cors"
+import { METHODS } from "http";
 
 dotenv.config("./.env");
 
@@ -16,11 +17,16 @@ const corsOptions={
 app.use(bodyparser.json());
 app.use("/user", dataRouter);
 app.use(cors(corsOptions));
-
+app.use((req,res,next)=>{res.setHeader("Access-Control-Allow-Origin","*");
+res.setHeader("Access-Control-Allow-Methods","GET,POST,PUT,PATCH,DELETE");
+res.setHeader("Acces-Control-Allow-METHODS","Content-Type","Authorization")
+next();
+})
 app.use("/", (req, res) =>
   res.status(200).json({
     message: "This is API",
   })
+
 );
 const dburl = process.env.DATABASEURL;
 
