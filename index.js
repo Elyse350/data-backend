@@ -22,7 +22,7 @@ mongoose
   .connect(dburl, {})
   .then(() => console.log("database connected successfully"));
 const port = process.env.PORT;
-app.listen(port, () => {
+app.listen(port || 6090 ,() => {
   console.log(`server is running on port ${port}`);
 });
 export default app;
