@@ -16,12 +16,12 @@ app.use("/", (req, res) =>
     message: "This is API",
   })
 );
-const dburl = process.env.DATABASEURL;
+const dburl = process.env.MONGO_URI;
 
 mongoose.connect(dburl, {
-  //  userNewUrlParser:true,
+   userNewUrlParser:true,
   //   useCreateIndex:true,
-  //   userUnifiedTopology:true,
+    userUnifiedTopology:true,
   //   userFinfAndModify:false,
 }).then(() => console.log("database connected successfully"));
 const port = process.env.PORT;
