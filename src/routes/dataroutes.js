@@ -10,7 +10,7 @@ dataRouter.post(
   Validator.validateInput,
   dataController.signUp
 );
-
+dataRouter.get("/all", dataController.getAllUsers);
 
 
 export default dataRouter;
