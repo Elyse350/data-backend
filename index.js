@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import dataRouter from "./src/routes/dataroutes"
 
-require('dotenv').config()
+dotenv.config("./.env");
 
 const app = express();
 
@@ -25,7 +25,7 @@ mongoose.connect(dburl, {
   //   userFinfAndModify:false,
 }).then(() => console.log("database connected successfully"));
 const port = process.env.PORT;
-app.listen(port, () => {
+app.listen(port || 3000, () => {
   console.log(`server is running on port ${port}`);
   
 });
