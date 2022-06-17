@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import dataRouter from "./src/routes/dataroutes"
 
-require('dotenv').config()
+dotenv.config("./.env");
 
 const app = express();
 
@@ -19,10 +19,7 @@ app.use("/", (req, res) =>
 const dburl = process.env.DATABASEURL;
 
 mongoose.connect(dburl, {
-   userNewUrlParser:true,
-  //   useCreateIndex:true,
-    userUnifiedTopology:true,
-  //   userFinfAndModify:false,
+   
 }).then(() => console.log("database connected successfully"));
 const port = process.env.PORT;
 app.listen(port, () => {
