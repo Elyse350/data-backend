@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import dataRouter from "./src/routes/dataroutes"
 
-dotenv.config("./.env");
+require('dotenv').config()
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use("/", (req, res) =>
     message: "This is API",
   })
 );
-const dburl = process.env.MONGO_URI;
+const dburl = process.env.DATABASEURL;
 
 mongoose.connect(dburl, {
    userNewUrlParser:true,
@@ -27,5 +27,6 @@ mongoose.connect(dburl, {
 const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
+  mongoose.set('useFindAndModify', false)
 });
 export default app;
