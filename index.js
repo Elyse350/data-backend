@@ -18,9 +18,8 @@ app.use("/", (req, res) =>
 );
 const dburl = process.env.DATABASEURL;
 
-mongoose
-  .connect(dburl, {})
-  .then(() => console.log("database connected successfully"));
+mongoose.connect(dburl, {
+}).then(() => console.log("database connected successfully"));
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
