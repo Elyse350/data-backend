@@ -1,39 +1,99 @@
 {
   
   "name": "data",
+  
   "version": "1.0.0",
+  
   "description": "",
+  
   "main": "index.js",
+  
   "scripts": {
-    "start": "babel-node ./index.js",
-    "dev": "nodemon --exec babel-node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  
+    
+  "start": "babel-node ./index.js",
+  
+    
+  "dev": "nodemon --exec babel-node ./index.js",
+  
+    
+  "test": "echo \"Error: no test specified\" && exit 1"
+  
   },
+  
   "keywords": [
-    "example",
-    "heroku"
+  
+    
+  "example",
+  
+    
+  "heroku"
+  
   ],
+  
   "author": "elyse",
+  
   "license": "ISC",
+  
   "engines": {
-    "node": "16.13.0"
+  
+    
+  "node": "16.13.0"
+  
   },
+  
   "dependencies": {
-    "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.18.5",
-    "@babel/node": "^7.18.5",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/polyfill": "^7.0.0",
-    "@babel/register": "^7.12.10",
-    "@babel/preset-env": "^7.18.2",
-    "@types/node": "^14.14.22",
-    "bcrypt": "^5.0.1",
-    "body-parser": "^1.20.0",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "express-validator": "^6.14.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.3.8",
-    "nodemon": "^2.0.16"
+  
+    
+  "@babel/cli": "^7.17.10",
+  
+    
+  "@babel/core": "^7.18.5",
+  
+    
+  "@babel/node": "^7.18.5",
+  
+    
+  "@babel/plugin-transform-runtime": "^7.12.10",
+  
+    
+  "@babel/polyfill": "^7.0.0",
+  
+    
+  "@babel/preset-env": "^7.18.2",
+  
+    
+  "@babel/register": "^7.12.10",
+  
+    
+  "@types/node": "^14.14.22",
+  
+    
+  "bcrypt": "^5.0.1",
+  
+    
+  "body-parser": "^1.20.0",
+  
+    
+  "cors": "^2.8.5",
+  
+    
+  "dotenv": "^16.0.1",
+  
+    
+  "express": "^4.18.1",
+  
+    
+  "express-validator": "^6.14.1",
+  
+    
+  "jsonwebtoken": "^8.5.1",
+  
+    
+  "mongoose": "^6.3.8",
+  
+    
+  "nodemon": "^2.0.16"
+  
   }
 }
