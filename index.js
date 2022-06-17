@@ -8,7 +8,7 @@ import cors from "cors"
 dotenv.config("./.env");
 
 const app = express();
-letcorsOptions={
+let corsOptions={
   origin:'*',
   credentionals:true ,
   optionSuccessStatus:200
