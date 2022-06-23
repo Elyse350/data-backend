@@ -17,9 +17,10 @@ const corsOptions={
 app.use(bodyparser.json());
 app.use("/user", dataRouter);
 app.use(cors(corsOptions));
-app.use((req,res,next)=>{res.setHeader("Access-Control-Allow-Origin","*");
-res.setHeader("Access-Control-Allow-Methods","GET,POST,PUT,PATCH,DELETE");
-res.setHeader("Acces-Control-Allow-METHODS","Content-Type","Authorization")
+app.use((req,res,next)=>{
+  res.setHeader('Access-Control-Allow-Origin:*');
+res.setHeader('Access-Control-Allow-METHODS:GET,POST,PUT,PATCH,DELETE');
+res.setHeader('Acces-Control-Allow-METHODS:Origin,Content-Type,x-auth-token');
 next();
 })
 app.use("/", (req, res) =>
